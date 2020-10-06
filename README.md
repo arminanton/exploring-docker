@@ -38,3 +38,6 @@ sudo service docker start
 sudo docker run hello-world
 ```
 
+You can use docker to run official images or you can use a dockerfile to build a custom image.
+You can also define volume to places of the host to facilitate development.
+Using dockerfile, you can merge dev files to build an actual image.
