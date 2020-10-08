@@ -36,8 +36,17 @@ sudo service docker start
 
 #run hello world
 sudo docker run hello-world
+
+#echo -n "plain text" | base64
 ```
+
+# Notes
 
 You can use docker to run official images or you can use a dockerfile to build a custom image.
 You can also define volume to places of the host to facilitate development.
 Using dockerfile, you can merge dev files to build an actual image.
+
+Make sure to use .dockerignore file including node modules, git, etc. Make sure to use caching of modules before adding the whole content.
+We can rely on alpine linux version for smaller images.
+
+Use kubernetes to manage and facilitate management and scale.
