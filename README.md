@@ -32,8 +32,12 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 
+sudo apt-get install -y python3 python3-pip
+pip3 install --user docker-compose
+
 #start docker daemon service
 sudo service docker start
+sudo update-rc.d docker defaults
 
 #run hello world
 sudo docker run hello-world
@@ -42,6 +46,8 @@ sudo docker run hello-world
 ```
 
 # Notes
+
+Since I am running ubuntu on WSL, I will also need to install docker desktop on windows.
 
 You can use docker to run official images or you can use a dockerfile to build a custom image.
 You can also define volume to places of the host to facilitate development.
