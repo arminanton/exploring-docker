@@ -30,6 +30,7 @@ sudo add-apt-repository \
 #install docker
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker $USER
 
 #start docker daemon service
 sudo service docker start
